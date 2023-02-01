@@ -3,6 +3,9 @@ from time import sleep
 from tqdm import tqdm
 import datetime
 from datetime import date
+import requests
+from bs4 import BeautifulSoup
+
 
 def greeting():
     global currentSTR
@@ -26,6 +29,7 @@ def getCity():
     global city
     global long
     global forcastType
+    global forcastStr
     global lat
     try:
         city = input("Please enter the name of the city to get weather forcast:") # Get City Name
@@ -33,15 +37,18 @@ def getCity():
     except Exception as ex:
         print("An exception occurred : ",ex)
     
-    if (forcastType == 1) :
+    
+    if (forcastType == '1') :
         forcastStr = "Civil Forcast"
-    elif (forcastType == 2) :
+    elif (forcastType == '2') :
         forcastStr = "Meteo Forcast"
-    else :
+    elif (forcastType == '3') :
         forcastStr = "Astro Forcast"
+    else:
+        print('No No',forcastType)
     
     print('City Name :',city,' Forcast Type:', forcastType, forcastStr)
-    getLongLat()
+    #getLongLat()
     
     
 
