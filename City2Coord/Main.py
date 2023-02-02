@@ -22,8 +22,21 @@ def greeting():
     return currentSTR
 
 def getLongLat():
-    print("data scrapting to get longitude and latitude")
-
+    print("Data scrapting to get longitude and latitude")
+    url = "https://www.google.com/search?q="+city+" longitude and latitude"
+    print(url)
+    html = requests.get(url).content
+    #print(html)
+    soup = BeautifulSoup(html, 'html.parser')
+    #print(soup.prettify)
+    #res = soup.title
+    #print(res.get_text())
+    listDiv = soup.find('div', attrs={'class': "Z0LcW t2b5Cf"})
+    
+    #strd = listdiv[5].txt
+    #pos=strd.find('Longitude')
+    print(listDiv)
+    
 def getCity():  
     greeting()
     global city
@@ -48,7 +61,7 @@ def getCity():
         print('No No',forcastType)
     
     print('City Name :',city,' Forcast Type:', forcastType, forcastStr)
-    #getLongLat()
+    getLongLat()
     
     
 
