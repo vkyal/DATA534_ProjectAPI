@@ -133,7 +133,7 @@ def documentation_weather_type(dataframe):
 
     weather = requests.get(api_url)
 
-    weather_out = BeautifulSoup(weather.text, features="lxml")
+    weather_out = BeautifulSoup(weather.text)
 
     tables = weather_out.find_all("table")
     
