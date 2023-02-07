@@ -1,5 +1,3 @@
-## DATA534_ProjectAPI
-
 ## Weather API
 
 [![Build Status][build-shield]][build-url]
