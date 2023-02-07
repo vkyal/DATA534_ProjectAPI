@@ -15,7 +15,7 @@ def coordinates(city):
 
         city = requests.get(wiki_url+city)
 
-        city = BeautifulSoup(city.text, features="lxml")
+        city = BeautifulSoup(city.text)
 
         for item in city.find_all("span", {"class":"geo"}):
             try:
@@ -37,7 +37,7 @@ def documentation_cloud_cover(dataframe):
 
     weather = requests.get(api_url)
 
-    weather_out = BeautifulSoup(weather.text, features="lxml")
+    weather_out = BeautifulSoup(weather.text)
 
     tables = weather_out.find_all("table")
     
@@ -67,7 +67,7 @@ def documentation_ppt_amt(dataframe):
 
     weather = requests.get(api_url)
 
-    weather_out = BeautifulSoup(weather.text, features="lxml")
+    weather_out = BeautifulSoup(weather.text)
 
     tables = weather_out.find_all("table")
     
@@ -99,7 +99,7 @@ def documentation_wind_spd_10m(dataframe):
 
     weather = requests.get(api_url)
 
-    weather_out = BeautifulSoup(weather.text, features="lxml")
+    weather_out = BeautifulSoup(weather.text)
 
     tables = weather_out.find_all("table")
     
@@ -174,7 +174,7 @@ def wiki_timezone(city):
     #url ="https://en.wikipedia.org/wiki/{city}".format(city=city)
     city = requests.get(wiki_url+city)
 
-    city = BeautifulSoup(city.text, features="lxml")
+    city = BeautifulSoup(city.text)
 
     rt =""
     for item in city.find_all("tr"):
