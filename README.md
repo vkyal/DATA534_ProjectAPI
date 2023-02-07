@@ -19,5 +19,5 @@
 [stars-shield]: https://img.shields.io/github/stars/vkyal/DATA534_ProjectAPI.svg?style=flat-square
 [stars-url]: https://github.com/vkyal/DATA534_ProjectAPI/stargazers
 [license-shield]: https://img.shields.io/github/license/vkyal/DATA534_ProjectAPI.svg?style=flat-square
-[license-url]: https://github.com/vkyal/DATA534_ProjectAPI/blob/master/LICENSE
+[license-url]: https://github.com/vkyal/DATA534_ProjectAPI/blob/main/LICENSE
 [build-url]: https://github.com/vkyal/DATA534_ProjectAPI/actions/workflows/build.yml
