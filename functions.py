@@ -10,6 +10,29 @@ wiki_url = "https://en.wikipedia.org/wiki/"
 api_url = "http://www.7timer.info/doc.php?lang=en#web_interface"
     
 def coordinates(city):
+    """
+    Turn city name into its co-ordinate format
+    
+    Turns city name into its geographical co-ordinate system 
+    by scraping the wikipedia pages by requesting the url for 
+    the given city name and extracting data with the help of BeautifulSoup.
+   
+    
+    Parameters
+    ----------
+    city : str
+        The city name to fetch its geometrical co-ordinates.
+        
+    Returns
+    -------
+    int
+        The geographical co-ordinates. 
+        
+    Examples
+    --------
+    >>> coordinates("Kelowna")
+    49.882114 , -119.477829
+    """
 
     try:
 
@@ -32,6 +55,26 @@ def coordinates(city):
         return "City doesn't exist!"
 
 def documentation_cloud_cover(dataframe):
+    
+    """
+    Turn the "cloudcover" dataframe column into its meaning
+    
+    Turns the dataframe "cloudcover" column with numerical data 
+    into its proper meaning by scraping the documentation of the API 
+    using Beautiful Soup.  
+   
+    
+    Parameters
+    ----------
+    dataframe : dataframe object
+        The forecast dataframe into its meaningful data.
+        
+    Returns
+    -------
+    dataframe
+        The understandable meaning of the "cloudcover" column to 'Cloudcover_Meaning'. 
+        
+    """
 
     #api_url = "http://www.7timer.info/doc.php?lang=en#web_interface"
 
@@ -62,6 +105,26 @@ def documentation_cloud_cover(dataframe):
     return temp
     
 def documentation_ppt_amt(dataframe):
+    
+     """
+    Turn the "prec_amount" dataframe column into its understandable meaning
+    
+    Turns the dataframe "prec_amount" column with numerical data 
+    into its proper meaning by scraping the documentation of the API 
+    using Beautiful Soup.  
+   
+    
+    Parameters
+    ----------
+    dataframe : dataframe object
+        The forecast dataframe into its meaningful data.
+        
+    Returns
+    -------
+    dataframe
+        The understandable meaning of the "prec_amount" column to 'Ppt_Meaning'. 
+        
+    """
 
     #url = "http://www.7timer.info/doc.php?lang=en#web_interface"
 
@@ -94,6 +157,26 @@ def documentation_ppt_amt(dataframe):
     return temp
 
 def documentation_wind_spd_10m(dataframe):
+    
+    """
+    Turn the "speed" dataframe column into its understandable meaning
+    
+    Turns the dataframe "speed" column with numerical data 
+    into its proper meaning by scraping the documentation of the API 
+    using Beautiful Soup.  
+   
+    
+    Parameters
+    ----------
+    dataframe : dataframe object
+        The forecast dataframe into its meaningful data.
+        
+    Returns
+    -------
+    dataframe
+        The understandable meaning of the "speed" column to 'Speed_Meaning'. 
+        
+    """
 
     #url = "http://www.7timer.info/doc.php?lang=en#web_interface"
 
@@ -128,6 +211,26 @@ def documentation_wind_spd_10m(dataframe):
     
     df3 = df3.join(s)
 def documentation_weather_type(dataframe):
+    
+    """
+    Turn the "weather" dataframe column into its understandable meaning
+    
+    Turns the dataframe "weather" column with numerical data 
+    into its proper meaning by scraping the documentation of the API 
+    using Beautiful Soup.  
+   
+    
+    Parameters
+    ----------
+    dataframe : dataframe object
+        The forecast dataframe into its meaningful data.
+        
+    Returns
+    -------
+    dataframe
+        The understandable meaning of the "weather" column to 'Weather_Meaning'. 
+        
+    """
 
     #url = "http://www.7timer.info/doc.php?lang=en#web_interface"
 
@@ -169,7 +272,27 @@ def documentation_weather_type(dataframe):
     
     return temp
 
-def wiki_timezone(city):  
+def wiki_timezone(city): 
+    """
+    Turn city name into it's GMT timezone.
+    
+    Turns city name into its GMT timezone by scraping 
+    the wikipedia pages by requesting the url for the given 
+    city name and extracting data with the help of BeautifulSoup.
+   
+    
+    Parameters
+    ----------
+    city : str
+        The city name to fetch it's GMT timezone.
+        
+    Returns
+    -------
+    int
+        The time zone of the city. 
+        
+    
+    """
     
     #url ="https://en.wikipedia.org/wiki/{city}".format(city=city)
     city = requests.get(wiki_url+city)
