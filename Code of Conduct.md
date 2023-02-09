@@ -1,8 +1,6 @@
 # Code of Conduct
 
-
 ## Our Pledge
-
 
 In the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to making participation in our project a harassment-free experience for everyone, regardless of age, ethnicity, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
 
@@ -44,3 +42,4 @@ Project maintainers who do not follow or enforce the Code of Conduct in good fai
 This Code of Conduct is adapted from the Contributor Covenant, version 1.4, available at https://www.contributor-covenant.org/version/1/4/code-of-conduct.html
 
 Source of this document is https://github.com/probot/template/blob/master/CODE_OF_CONDUCT.md
+
