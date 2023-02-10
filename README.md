@@ -13,7 +13,7 @@ This python-package WeatherForcastAPI contains 6 wrapper functions to get Weathe
 
 ### To install the package 
 
-1. Install the package by typing: pip install Wrapper-Module
+1. Install the package by typing: pip install Wrapper-Weather-Module-V1
 2. Add package to the python instance by typing: import Wrapper-Module as wm
 
 ##### Notes: 
