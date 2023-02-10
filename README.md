@@ -13,13 +13,22 @@ This python-package WeatherForcastAPI contains 6 wrapper functions to get Weathe
 
 ### To install the package 
 
-1. Install the package by typing: pip install Wrapper-Weather-Module-V1
-2. Add package to the python instance by typing: import Wrapper-Module as wm
+1. Install the package by typing: *pip install Wrapper-Weather-Module-V3*
+2. Add package to the python instance by typing: from Wrapper_Weather_Module_V3 import main as m
+3. Add the city name for which you want to see the results. For example, Vancouver, Toronto etc.
+4. Run the following code to view the table of the forecast:-
+```
+city_forecast_table = m.main()
+city_forecast_table
+```
+5. Run the following code to view the visualization chart of the forecast:-
+```
+city_forecast_chart = m.visual()
+city_forecast_chart
+```
 
 ##### Notes: 
 
 * This package comes with a dataset on realtime based on the used provided location using the api listed above. 
 * For details please find in our tutorial document.
 * Data Resources: https://www.7timer.info/
-
-Footer
